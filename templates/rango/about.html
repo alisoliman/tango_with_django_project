@@ -1,11 +1,9 @@
-<!DOCTYPE html>
+{% extends 'rango/base.html' %}
 {% load staticfiles %}
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>About</title>
-</head>
-<body>
+{% block title_block %}
+    About
+{% endblock %}
+{% block body_block %}
     <div>This tutorial have been put together by <br />
         <strong>{{ myname }}</strong> <br />
     </div>
@@ -13,5 +11,4 @@
         <img src="{% static "images/myimage.jpg" %}" alt="Picture of Me"/>
         <img src="{{ MEDIA_URL }}cats-politics-TN.jpg">
     </div>
-</body>
-</html>
+{% endblock %}
